@@ -5,21 +5,23 @@
   <title>Aplicaciones móviles en el comercio minorista</title>
 
   <style>
-
     body {
-
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #f4f4f9;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #f5f5f5;
     }
 
     header {
-      background: #2c3e50;
+      background: rgba(0, 0, 0, 0.7);
       color: white;
       padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header h1 {
@@ -27,7 +29,7 @@
     }
 
     nav a {
-      color: white;
+      color: #00d9ff;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
@@ -39,102 +41,133 @@
 
     .hero {
       background: url(Foto1.jpg) no-repeat center center/cover;
-      color: rgb(238, 238, 238);
-      text-align: center;
-      padding: 60px 20px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 40px;
+      text-align: right;
+      color: #ffffff;
     }
 
     .hero h2 {
-      font-size: 40px;
+      font-size: 50px;
+      margin-bottom: 10px;
     }
 
     .info {
-    height: 300px;
-    width: 600px;
-    padding: 40px;
-    margin: 40px auto;
-    border: 4px solid #2c3e50;
-    border-radius: 40px;
-    background: #f7fafc;
-    color: #2c3e50;
-    box-sizing: border-box;    
-    font-family: system-ui, Arial;
-    text-align: center;
-    }
-
-    .info h2 {
-      text-align: center;
-      color: #2c3e50;
+      max-width: 400px;
+      margin: 40px;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #f5f5f5;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .beneficios {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      justify-content: space-around;
       gap: 20px;
       padding: 40px;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .card {
-      background: rgb(255, 255, 255);
+      background: rgba(255,255,255,0.15);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-align: center;
+      flex: 1;
+      backdrop-filter: blur(8px);
     }
 
     .card h3 {
-      color: #27ae60;
+      color: #00ff99;
     }
 
     .ejemplos {
-      padding: 40px;
-      background: #ecf0f1;
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .ejemplos h2 {
-      text-align: center;
       margin-bottom: 20px;
+      font-size: 32px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
     .grid img {
       width: 100%;
       border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .tabla {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .tabla h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background: #00d9ff;
+      color: #000;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255,255,255,0.1);
     }
 
     footer {
-      background: #2c3e50;
+      background: rgba(0, 0, 0, 0.7);
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 20px;
     }
   </style>
-
 </head>
 <body>
 
   <header>
-    <h1>Aplicaciones Móviles En El Comercio Minorista <br></h1>
+    <h1>Aplicaciones Móviles En El Comercio Minorista</h1>
     <nav>
       <a href="#info">Información</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#ejemplos">Ejemplos</a>
+      <a href="#comparacion">Comparación</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>   El Comercio Minorista Con Apps Móviles</h2>
-    <p> <br> Más Cercanía, Más ventas, Más innovación.</p>
+    <h2>El Comercio Minorista Con Apps Móviles</h2>
+    <p>Más Cercanía, Más ventas, Más innovación.</p>
   </section>
 
   <section id="info" class="info">
-    <h2>¿Qué son las aplicaciones móviles en el comercio minorista?</h2>
+    <h2>¿Qué son las aplicaciones móviles?</h2>
     <p>
       Son herramientas digitales que permiten a los negocios minoristas ofrecer 
       una experiencia de compra más rápida, personalizada y eficiente. 
@@ -160,14 +193,40 @@
   <section id="ejemplos" class="ejemplos">
     <h2>Ejemplos de aplicaciones</h2>
     <div class="grid">
-      <img src= "Foto2.jpg" alt="Ejemplo 1">
-      <img src= "Foto3.jpg" alt="Ejemplo 2">
-      <img src= "Foto4.jpg" alt="Ejemplo 3">
+      <img src="Foto2.jpg" alt="Ejemplo 1">
+      <img src="Foto3.jpg" alt="Ejemplo 2">
+      <img src="Foto4.jpg" alt="Ejemplo 3">
     </div>
   </section>
 
+  <section id="comparacion" class="tabla">
+    <h2>Comparación de tipos de apps</h2>
+    <table>
+      <tr>
+        <th>Tipo de App</th>
+        <th>Ventajas</th>
+        <th>Ejemplo</th>
+      </tr>
+      <tr>
+        <td>Fidelización</td>
+        <td>Premios y descuentos para clientes frecuentes</td>
+        <td>Club de Puntos</td>
+      </tr>
+      <tr>
+        <td>Catálogo</td>
+        <td>Permite ver productos sin ir a la tienda</td>
+        <td>Catálogo Virtual</td>
+      </tr>
+      <tr>
+        <td>E-commerce</td>
+        <td>Compra en línea desde cualquier lugar</td>
+        <td>Amazon / Mercado Libre</td>
+      </tr>
+    </table>
+  </section>
+
   <footer>
-    <p>&copy; 2025 <br>S&M</p>
+    <p>&copy; 2025 <br> S&M</p>
   </footer>
 
 </body>
